@@ -1,0 +1,209 @@
+@import "../styles/media-queries";
+.info-bar {
+  grid-area: nav-bar;
+  min-height: 100vh;
+  height: auto;
+  width: 25rem;
+  background: #eee;
+  transition: all 1s;
+  animation: info-anim 2s;
+  @include xs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1s;
+    animation: info-anim 1s;
+    @keyframes info-anim {
+      0% {
+        transform: translateX(-25rem);
+      }
+      100% {
+        transform: translateX(0rem);
+      }
+    }
+  }
+
+  @keyframes info-anim {
+    0% {
+      opacity: 0;
+      transform: translateX(-25rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0rem);
+    }
+  }
+}
+.info-bar-active {
+  transform: translateX(-100%);
+}
+// img
+
+img {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  // transition: all 2s;
+}
+
+.img-container {
+  height: 20rem;
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+  @include xs {
+    margin: 2rem;
+  }
+}
+
+// info
+
+.info-content {
+  height: auto;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  @include xs {
+    text-align: center;
+  }
+}
+
+// info perso
+
+.info-perso-container {
+  height: auto;
+  margin-bottom: 2rem;
+}
+.div-info {
+  margin-left: 2rem;
+  @include xs {
+    margin: 0;
+  }
+}
+
+.p-info {
+  font-style: italic;
+  font-weight: 400;
+  margin: 0.5rem;
+}
+
+// telephone
+.telephone {
+  cursor: pointer;
+}
+.fa-phone {
+  rotate: 135deg;
+  transition: all 1s;
+  color: #6420aa;
+}
+.fa-phone-active {
+  rotate: 0deg;
+  color: #333;
+}
+.telephone-num {
+  opacity: 0;
+  @include xs {
+    opacity: 1;
+    color: #6420aa;
+  }
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: all 1s;
+}
+.telephone-num-active {
+  opacity: 1;
+  color: #6420aa;
+}
+.bottom {
+  margin-bottom: 2rem;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #6420aa;
+  font-weight: 700;
+}
+.title-phone {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+// mail
+
+.mail {
+  display: flex;
+  font-size: 2rem;
+  margin-left: 2rem;
+  $transition: all 1s;
+  @include xs {
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+.fa-envelope {
+  cursor: pointer;
+  color: #6420aa;
+}
+.fa-envelope-active {
+  display: none;
+}
+.fa-envelope-open {
+  display: none;
+}
+.fa-envelope-open-active {
+  display: flex;
+  cursor: pointer;
+}
+.title-mail {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  @include xs {
+    justify-content: center;
+  }
+}
+.mail-anim {
+  opacity: 0;
+  @include xs {
+    opacity: 1;
+    color: #6420aa;
+    margin: 0.5rem;
+  }
+  font-size: 1.6rem;
+  margin-left: 1.3rem;
+  transition: all 1s;
+}
+.mail-anim-active {
+  opacity: 1;
+  color: #6420aa;
+}
+
+// langue
+.langue-container {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  @include xs {
+    margin: 0;
+    margin-top: 2rem;
+  }
+}
+.text {
+  color: #333;
+  font-size: 1.8rem;
+}
+.star {
+  font-size: 1.4rem;
+  color: #6420aa;
+  margin: 1rem 0.2rem;
+}
+.star-1 {
+  font-size: 1.4rem;
+  color: #bbb;
+  margin: 1rem 0.2rem;
+}
